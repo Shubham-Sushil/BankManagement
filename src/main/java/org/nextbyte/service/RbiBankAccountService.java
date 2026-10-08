@@ -1,8 +1,10 @@
-package org.example;
+package org.nextbyte.service;
 
-public interface RbiBankAccount {
+import org.nextbyte.dto.RbiBankAccountDto;
 
-    boolean deposite(int actNo, int depositeAmount);
+public interface RbiBankAccountService {
+
+    boolean deposite(int depositeAmount, RbiBankAccountDto bankAccountDto);
 
     boolean deposite(int actNo, int depositeAmount, String accountHolderName);
 

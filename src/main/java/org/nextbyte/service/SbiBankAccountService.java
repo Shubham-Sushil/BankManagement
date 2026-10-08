@@ -1,10 +1,12 @@
-package org.example;
+package org.nextbyte.service;
 
-public class SbiBankAccount extends RbiBankAccountImpl{
+import org.nextbyte.dto.RbiBankAccountDto;
+
+public class SbiBankAccountService extends RbiBankAccountServiceImpl {
 
     @Override
-    public boolean deposite(int actNo, int depositeAmount) {
-        super.deposite(actNo, depositeAmount);
+    public boolean deposite(int depositeAmount, RbiBankAccountDto bankAccountDto) {
+        super.deposite(depositeAmount, bankAccountDto);
         System.out.println("Amount deposited in SBI");
         return true;
     }
