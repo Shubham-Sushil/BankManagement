@@ -6,9 +6,9 @@ public class CollectionsBasics {
 
     public static void main(String[] args) {
         CollectionsBasics c = new CollectionsBasics();
-        c.demoList();
+        //c.demoList();
         c.demoSet();
-        c.demoMap();
+        //c.demoMap();
     }
 
     public void demoList(){
@@ -25,6 +25,8 @@ public class CollectionsBasics {
 
         System.out.println(l);
 
+        printCollections(l);
+
     }
 
     public void demoSet(){
@@ -40,6 +42,7 @@ public class CollectionsBasics {
         s.add(10);
 
         System.out.println(s);
+        printCollections(s);
 
     }
 
@@ -56,5 +59,27 @@ public class CollectionsBasics {
         System.out.println(map);
 
     }
+
+    public void printCollections(Collection l){
+        System.out.println("Printing Collections manually");
+        System.out.println("For Loop");
+        /*for (int i=0; i<l.size(); i++){
+            System.out.println(l.get(i));
+        }*/
+        System.out.println("For each Loop");
+        for(Object i: l){
+            System.out.println(i);
+        }
+
+        System.out.println("Iterator print");
+        Iterator itr = l.iterator();
+        while(itr.hasNext()){
+            Object i = itr.next();
+            System.out.println(i);
+        }
+
+    }
+
+
 
 }
